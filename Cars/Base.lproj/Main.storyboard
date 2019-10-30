@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tNx-Zb-xlT">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hGD-LM-Afc">
+            <objects>
+                <navigationController id="tNx-Zb-xlT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T2K-3b-CHG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fgE-g4-5Av"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUo-KP-Agf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442" y="88"/>
+        </scene>
+        <!--Cars-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CarsViewController" customModule="Cars" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rNx-wq-yc6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4Lm-8l-Q52"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="List"/>
+                                    <segment title="Map"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" red="1" green="0.37254901959999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mK5-DT-nyP"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxx-xb-ygb">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <connections>
+                                    <segue destination="b20-E6-jEV" kind="embed" identifier="mapEmbeddedSegue" id="LrF-i0-2lV"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9J-0g-eaq">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <connections>
+                                    <segue destination="XEW-3q-Ora" kind="embed" identifier="listEmbeddedSegue" id="leT-dJ-2q5"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rNx-wq-yc6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5XG-av-9Uo"/>
+                            <constraint firstItem="bxx-xb-ygb" firstAttribute="top" secondItem="rNx-wq-yc6" secondAttribute="bottom" id="7Aw-xn-VTh"/>
+                            <constraint firstItem="rNx-wq-yc6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Qt1-Rb-yDZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S9J-0g-eaq" secondAttribute="bottom" id="Uzo-DO-fgf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bxx-xb-ygb" secondAttribute="bottom" id="Xh0-2D-tA3"/>
+                            <constraint firstItem="bxx-xb-ygb" firstAttribute="top" secondItem="rNx-wq-yc6" secondAttribute="bottom" id="bqc-nx-Rsb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S9J-0g-eaq" secondAttribute="trailing" id="cMs-et-N6Z"/>
+                            <constraint firstItem="S9J-0g-eaq" firstAttribute="top" secondItem="rNx-wq-yc6" secondAttribute="bottom" id="fvw-KH-WQv"/>
+                            <constraint firstItem="bxx-xb-ygb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gqP-ry-aC9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxx-xb-ygb" secondAttribute="trailing" id="mz6-zC-Kp6"/>
+                            <constraint firstItem="S9J-0g-eaq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="paj-Ej-pJi"/>
+                            <constraint firstItem="rNx-wq-yc6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sBw-SK-TDY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cars" id="61n-BB-1R6"/>
+                    <connections>
+                        <outlet property="listContainerView" destination="S9J-0g-eaq" id="H5m-eh-yST"/>
+                        <outlet property="mapContainerView" destination="bxx-xb-ygb" id="GSo-nv-VrM"/>
+                        <outlet property="segmentControl" destination="rNx-wq-yc6" id="gr6-89-Om8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="89"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="mIC-vb-RTa">
+            <objects>
+                <viewController id="XEW-3q-Ora" customClass="ListViewController" customModule="Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SOK-LE-SGo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="5" translatesAutoresizingMaskIntoConstraints="NO" id="1EB-79-rp4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="carCellIdentifier" rowHeight="100" id="sBr-RO-WKD" customClass="CarTableViewCell" customModule="Cars" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="374" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sBr-RO-WKD" id="FCV-4h-GE3">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWK-N1-obK" customClass="CarView" customModule="Cars" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                                    <color key="backgroundColor" red="1" green="0.37254901959999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.37254901959999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="rWK-N1-obK" firstAttribute="top" secondItem="FCV-4h-GE3" secondAttribute="topMargin" constant="-11" id="9TG-Lv-KTH"/>
+                                                <constraint firstItem="rWK-N1-obK" firstAttribute="leading" secondItem="FCV-4h-GE3" secondAttribute="leadingMargin" constant="-20" id="K43-l4-WmM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rWK-N1-obK" secondAttribute="trailing" constant="-20" id="Zbc-ny-jhj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rWK-N1-obK" secondAttribute="bottom" constant="-11" id="z0q-tK-TWX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.37254901959999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="carView" destination="rWK-N1-obK" id="bQC-0Z-b2e"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XEW-3q-Ora" id="EQ0-mJ-YD3"/>
+                                    <outlet property="delegate" destination="XEW-3q-Ora" id="rWe-gy-ZuO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1EB-79-rp4" firstAttribute="leading" secondItem="SOK-LE-SGo" secondAttribute="leading" id="CN3-m7-6c8"/>
+                            <constraint firstItem="1EB-79-rp4" firstAttribute="top" secondItem="SOK-LE-SGo" secondAttribute="top" id="oAY-H6-uXN"/>
+                            <constraint firstAttribute="bottom" secondItem="1EB-79-rp4" secondAttribute="bottom" id="sDB-F5-zdn"/>
+                            <constraint firstAttribute="trailing" secondItem="1EB-79-rp4" secondAttribute="trailing" id="vOk-ht-XzU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NB4-on-6kD"/>
+                    </view>
+                    <connections>
+                        <outlet property="carsTableView" destination="1EB-79-rp4" id="dFT-sA-XaK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yE0-Bo-y8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184.05797101449278" y="830.69196428571422"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Bjd-gP-6lr">
+            <objects>
+                <viewController id="b20-E6-jEV" customClass="MapViewController" customModule="Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVY-0q-Tv5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WhY-kZ-SEF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
+                                <connections>
+                                    <outlet property="delegate" destination="b20-E6-jEV" id="ViB-F8-doP"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WhY-kZ-SEF" secondAttribute="trailing" id="QC1-Ze-mjV"/>
+                            <constraint firstItem="WhY-kZ-SEF" firstAttribute="top" secondItem="rVY-0q-Tv5" secondAttribute="top" id="S0G-Vx-K3e"/>
+                            <constraint firstItem="WhY-kZ-SEF" firstAttribute="leading" secondItem="rVY-0q-Tv5" secondAttribute="leading" id="bJ1-Dv-VWB"/>
+                            <constraint firstAttribute="bottom" secondItem="WhY-kZ-SEF" secondAttribute="bottom" id="yhO-L4-H11"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jOb-VE-HJI"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="WhY-kZ-SEF" id="I0H-ch-pAP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUV-Ty-jCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="831"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarView" customModule="Cars" customModuleProvider="target">
+            <connections>
+                <outlet property="carColorLbl" destination="ylO-fQ-Bwf" id="3QX-pr-uMJ"/>
+                <outlet property="carImageView" destination="oHq-RH-Xwp" id="Oiu-w7-Zg9"/>
+                <outlet property="carModelLbl" destination="BUe-hb-dox" id="rLL-he-QSB"/>
+                <outlet property="driverNameLbl" destination="Knv-fh-VdK" id="dgj-IO-hdW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RfU-8Y-DYW">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Driver: abcdef" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knv-fh-VdK">
+                    <rect key="frame" x="170" y="10" width="108.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Model:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUe-hb-dox">
+                    <rect key="frame" x="170" y="40.5" width="52.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylO-fQ-Bwf">
+                    <rect key="frame" x="170" y="71" width="46" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultCarIcon" translatesAutoresizingMaskIntoConstraints="NO" id="oHq-RH-Xwp">
+                    <rect key="frame" x="10" y="10" width="140" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="XaD-5S-fIh"/>
+                        <constraint firstAttribute="width" secondItem="oHq-RH-Xwp" secondAttribute="height" multiplier="7:4" id="oaa-IH-hJF"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.37254901960784315" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Knv-fh-VdK" firstAttribute="top" secondItem="RfU-8Y-DYW" secondAttribute="top" constant="10" id="24D-xV-iYh"/>
+                <constraint firstItem="ylO-fQ-Bwf" firstAttribute="leading" secondItem="BUe-hb-dox" secondAttribute="leading" id="3te-lV-TWy"/>
+                <constraint firstItem="BUe-hb-dox" firstAttribute="top" secondItem="Knv-fh-VdK" secondAttribute="bottom" constant="10" id="9oV-Pq-cud"/>
+                <constraint firstItem="oHq-RH-Xwp" firstAttribute="top" secondItem="Knv-fh-VdK" secondAttribute="top" id="AQ5-Pd-Mqz"/>
+                <constraint firstItem="BEQ-SI-hB6" firstAttribute="bottom" secondItem="ylO-fQ-Bwf" secondAttribute="bottom" constant="9" id="ByS-1o-wad"/>
+                <constraint firstItem="oHq-RH-Xwp" firstAttribute="leading" secondItem="BEQ-SI-hB6" secondAttribute="leading" constant="10" id="KVc-LK-K1L"/>
+                <constraint firstItem="BUe-hb-dox" firstAttribute="leading" secondItem="Knv-fh-VdK" secondAttribute="leading" id="lwM-eJ-onO"/>
+                <constraint firstItem="ylO-fQ-Bwf" firstAttribute="top" secondItem="BUe-hb-dox" secondAttribute="bottom" constant="10" id="s4v-2k-Mau"/>
+                <constraint firstItem="Knv-fh-VdK" firstAttribute="leading" secondItem="oHq-RH-Xwp" secondAttribute="trailing" constant="20" id="sKj-qZ-ELg"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="BEQ-SI-hB6"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="25"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="143.47826086956522" y="94.419642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="defaultCarIcon" width="256" height="256"/>
+    </resources>
+</document>
