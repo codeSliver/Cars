@@ -5,6 +5,11 @@ App shows a list of cars fetched  from server. User can view the cars as a list 
 - View cars on the map and get information about driver name, car license plate and model by tapping on the car pin.
 - If there's no internet connectivity at the time of app start and no cars are fetched user is shown an error and when internet connectivity is restored app automatically detects the change and fetches the list of cars if there were no cars to show previously.
 
+## Sample Screens
+[List]<img src="Screenshots/list_iPhone11MaxPro_Simulator_dark.png" width="320" height="560">
+[Map]<img src="Screenshots/map_iPhone11MaxPro_Simulator_light.png" width="320" height="560">
+[List]<img src="Screenshots/list_iPhone8_dark.png" width="320" height="560">
+[Map]<img src="Screenshots/map_iPhone8_dark.png" width="320" height="560">
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and debugging purposes.
@@ -28,7 +33,7 @@ You would need a macbook with XCode 11.x installed.
 
 ## Technical Details
 
-### ThirdParty
+### Third Party
 - No Third Party library is used and everything is build using native iOS components.
 
 ### App Architecture
@@ -49,9 +54,11 @@ Code is divided into following Groups
 - CarView subgroup contains *CarView*, *CarViewModel* and *CarView.xib*. *CarView* is a custom view and is used by both *CarTableViewCell* and *CarAnnotation* to display information about the car. Since information to be displayed on list and map is same for the car so this view is resued.
 - Binder subgroup contains Bindable swift class. Its a generic type which provides a closure to be bind on the value so that events can be triggered on value change.
 
-### Unit tests
+### Unit Tests
+- Unit test are written and provide a code coverage of 78.1 percent. see the screenshot attached.
+![Code Coverage](Screenshots/codeCoverage.png)
 
-Unit tests are arranged in two subgroups
+Unit tests are arranged in two subgroups:
 - ViewModel subgroup contains tests written on ViewModels
 - Networking subgroup contains tests written on Network Services
 
@@ -61,6 +68,7 @@ Following test cases are written:
 - MapViewModelTest for testing MapViewModel with a mock json file to make sure view model behaves correctly.
 - ListViewModelTest for testing ListViewModel with a mock json file to make sure view model behaves correctly.
 - Url encoding test for URLEncoder to see if urls are being configured correctly.
+
 
 ## Built With
 - XCode 11.1
