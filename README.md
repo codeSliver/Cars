@@ -6,9 +6,7 @@ App shows a list of cars fetched  from server. User can view the cars as a list 
 - If there's no internet connectivity at the time of app start and no cars are fetched user is shown an error and when internet connectivity is restored app automatically detects the change and fetches the list of cars if there were no cars to show previously.
 
 ## Sample Screens
-<img src="Screenshots/list_iPhone11MaxPro_Simulator_dark.png" width="320" height="560">
-<img src="Screenshots/map_iPhone11MaxPro_Simulator_light.png" width="320" height="560">
-<img src="Screenshots/list_iPhone8_dark.png" width="320" height="560">
+<img src="Screenshots/list_iPhone11MaxPro_Simulator_dark.png" width="320" height="560"><img src="Screenshots/map_iPhone11MaxPro_Simulator_light.png" width="320" height="560"><img src="Screenshots/list_iPhone8_dark.png" width="320" height="560">
 <img src="Screenshots/map_iPhone8_dark.png" width="320" height="560">
 ## Getting Started
 
