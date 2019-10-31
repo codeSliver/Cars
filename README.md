@@ -7,9 +7,7 @@ App shows a list of cars fetched  from server. User can view the cars as a list 
 - App supports both landscape and portrait orientations.
 
 ## Sample Screens
-<img src="Screenshots/list_iPhone11MaxPro_Simulator_dark.png" width="320" height="560">
-<img src="Screenshots/map_iPhone11MaxPro_Simulator_light.png" width="320" height="560">
-<img src="Screenshots/list_iPhone8_dark.png" width="320" height="560">
+<img src="Screenshots/list_iPhone11MaxPro_Simulator_dark.png" width="320" height="560"><img src="Screenshots/map_iPhone11MaxPro_Simulator_light.png" width="320" height="560"><img src="Screenshots/list_iPhone8_dark.png" width="320" height="560">
 <img src="Screenshots/map_iPhone8_dark.png" width="320" height="560">
 ## Getting Started
 
