@@ -4,6 +4,7 @@ App shows a list of cars fetched  from server. User can view the cars as a list 
 - List of cars with driver name, car license plate and model.
 - View cars on the map and get information about driver name, car license plate and model by tapping on the car pin.
 - If there's no internet connectivity at the time of app start and no cars are fetched user is shown an error and when internet connectivity is restored app automatically detects the change and fetches the list of cars if there were no cars to show previously.
+- App supports both landscape and portrait orientations.
 
 ## Sample Screens
 <img src="Screenshots/list_iPhone11MaxPro_Simulator_dark.png" width="320" height="560">
@@ -18,11 +19,26 @@ These instructions will get you a copy of the project up and running on your loc
 
 You would need a macbook with XCode 11.x installed. 
 
-### Installing
+CocoaPods:
+Application is using CocoaPods for dependency management. In order to install CocoaPods run following command on Terminal:
+
+```
+$ sudo gem install cocoapods
+```
+See [Getting Started on CocoaPods](https://guides.cocoapods.org/using/getting-started.html) for more informaiton.
+
+
+### Installing Pods
+- Open Terminal and run following command to install pods:
+```
+$ pod install
+```
+
+### Installing Builds
 
 - To be able to install the build on the iPhone you will be needing Apple Developer provisioning and certifcate. You can create your Apple developer account [here](https://developer.apple.com/).
 - You can create build on iOS 13.x or later simulator provided with the XCode 11.x or later.
-- To run the project Navigate to the *Cars* folder on your machine where you cloned it. And open the project using *Cars.xcodeproj* file.
+- To run the project Navigate to the *Cars* folder on your machine where you cloned it. And open the project using *Cars.xcworkspace* file.
 
 ## User Guide to use the app
 - On Launch if app is connected to the internet it automatically fetches list of cars.
@@ -34,7 +50,7 @@ You would need a macbook with XCode 11.x installed.
 ## Technical Details
 
 ### Third Party
-- No Third Party library is used and everything is build using native iOS components.
+- MBProgressHud is used for showing the spinner view while cars are being fetched from the server.
 
 ### App Architecture
 - MVVM Architecture is used in the app.

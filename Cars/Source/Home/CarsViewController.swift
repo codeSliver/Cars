@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MBProgressHUD
 /// View with two container views to display list and map views and a segment control
 class CarsViewController: UIViewController {
     
@@ -34,8 +34,14 @@ extension CarsViewController: AlertService {
     /// Binds view  model closures
     func bindViewModel() {
         viewModel.carsFetchFailed = { [weak self] errorString in
+            self?.hideHud()
             self?.showAlert(titleStr: "Error", messageStr: errorString, okButtonTitle: "OK", cancelButtonTitle: nil, response: nil)
         }
+        let carsFetched: CarsFetchedCallBack = { [weak self] cars in
+            self?.hideHud()
+        }
+        viewModel.carsFetched.append(carsFetched)
+        
         viewModel.viewType.bind { [weak self] viewType in
             switch viewType {
             case .list:
@@ -50,8 +56,19 @@ extension CarsViewController: AlertService {
                 })
             }
         }
-        
+        showHud()
         viewModel.fetchCars()
+    }
+    private func showHud() {
+        DispatchQueue.main.async {
+            let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+            hud.mode = .annularDeterminate
+        }
+    }
+    private func hideHud() {
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
     }
 }
 //MARK:- Segue Methods
