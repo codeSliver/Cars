@@ -28,7 +28,7 @@ class ImageServiceTest: XCTestCase {
         let imageReceivedPromise = expectation(description: "Data is received Successfully")
         imageService.fetchImage("mini.png") { (image, error) in
             imageReceivedPromise.fulfill()
-            XCTAssertNil(error, error ?? "Recieved some error")
+            XCTAssertNil(error, error?.description ?? "Recieved some error")
             XCTAssertNotNil(image, "image API response is nil")
         }
         wait(for: [imageReceivedPromise], timeout: 3.0)

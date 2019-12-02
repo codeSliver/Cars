@@ -1,4 +1,4 @@
-# TMDSample
+# Cars
 App shows a list of cars fetched  from server. User can view the cars as a list or see those on the map according to the location of the car. User can toggle between map and list by using the segment control at the top.
 ### Features
 - List of cars with driver name, car license plate and model.
